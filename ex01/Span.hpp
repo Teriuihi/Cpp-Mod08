@@ -1,11 +1,12 @@
 #ifndef SPAN_HPP
 #define SPAN_HPP
-#include <set>
+#include <vector>
 
 class Span {
 private:
 	unsigned int len, contains;
-	std::multiset<int> data;
+	std::vector<int> data;
+	int span(int (*calcSpan)(int shortest, int curr));
 public:
 	Span(int n);
 	int shortestSpan();
